@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:gravity="center"
+    tools:context=".home">
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/cart"
+        android:background="#F80C0C"
+        android:drawableLeft="@drawable/ic_action_logout"
+        android:onClick="logout"
+        android:text="Log Out"
+        app:layout_constraintBottom_toBottomOf="@+id/cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cart"
+        app:layout_constraintTop_toTopOf="@+id/cart" />
+
+    <ImageButton
+        android:id="@+id/cart"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="0dp"
+        android:layout_toRightOf="@id/name"
+        android:background="#ECDD94"
+        android:onClick="cart"
+        android:tint="#F44336"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_cart"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart"
+        app:layout_constraintEnd_toStartOf="@+id/cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@id/name"
+        android:background="#F1EDED"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/mob1"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob1c"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:onClick="mobd1"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/m1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/mob1c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_action_cart"
+                    android:gravity="center"
+                    android:onClick="addm1"
+                    android:text="M1"
+                    android:textColor="#D30909"
+                    android:textSize="25sp"
+                    app:drawableTint="#FF9800"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="250dp" />
+
+                <TextView
+                    android:id="@+id/md1"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob1c"
+                    android:background="#FDF8F8"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:onClick="mobd1"
+                    android:padding="20dp"
+                    android:text="Cost = 500$\nSpecifications:\n    ...\n    ..."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#171717"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/mob2"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob2c"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:onClick="mobd2"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/m2"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/mob2c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_action_cart"
+                    android:gravity="center"
+                    android:onClick="addm2"
+                    android:text="M2"
+                    android:textColor="#D30909"
+                    android:textSize="25sp"
+                    app:drawableTint="#FF9800"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="250dp" />
+
+                <TextView
+                    android:id="@+id/md2"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob2c"
+                    android:background="#FDF8F8"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:onClick="mobd2"
+                    android:padding="20dp"
+                    android:text="Cost = 550$\nSpecifications:\n    ...\n    ..."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#171717"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="327dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/mob3"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob3c"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:onClick="mobd3"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/m3"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/mob3c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_action_cart"
+                    android:gravity="center"
+                    android:onClick="addm3"
+                    android:text="M3"
+                    android:textColor="#D30909"
+                    android:textSize="25sp"
+                    app:drawableTint="#FF9800"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="250dp" />
+
+                <TextView
+                    android:id="@+id/md3"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob3c"
+                    android:background="#FDF8F8"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:onClick="mobd3"
+                    android:padding="20dp"
+                    android:text="Cost = 600$\nSpecifications:\n    ...\n    ..."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#171717"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/mob4"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob4c"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:onClick="mobd4"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/m4"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/mob4c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_action_cart"
+                    android:gravity="center"
+                    android:onClick="addm4"
+                    android:text="M4"
+                    android:textColor="#D30909"
+                    android:textSize="25sp"
+                    app:drawableTint="#FF9800"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="249dp" />
+
+                <TextView
+                    android:id="@+id/md4"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_above="@id/mob4c"
+                    android:background="#FDF8F8"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:onClick="mobd4"
+                    android:padding="20dp"
+                    android:text="Cost = 650$\nSpecifications:\n    ...\n    ..."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#171717"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

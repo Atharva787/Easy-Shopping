@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:padding="10dp"
+    tools:context=".cart">
+
+
+    <TextView
+        android:id="@+id/cart"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Cart"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="#F80C0C"
+        android:drawableLeft="@drawable/ic_action_logout"
+        android:gravity="top"
+        android:onClick="logout"
+        android:text="Log Out"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textPersonName"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="378dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="130dp">
+
+        <TextView
+            android:id="@+id/product"
+            android:layout_width="212dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Qty."
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Cost"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="-48dp"
+            tools:layout_editor_absoluteY="567dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="378dp"
+        android:layout_height="407dp"
+        android:layout_below="@id/menu"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="170dp">
+
+        <TableLayout
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp">
+
+            <TableRow
+                android:id="@+id/m1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M1"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M2"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M3"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M4"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L1"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L2"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L3"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L4"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mobile Charger"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Head Phones"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mobile Cover"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Camera Lens"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/la1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Laptop Charger"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Laptop Cover"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mouse"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Keyboard"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="TOTAL"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tqty"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tcost"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/orderb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="#101010"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="order"
+        android:text="Place\nOrder"
+        android:textColor="#FAF8F8"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="585dp"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+<!--Proper Old-->
+<!--<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:padding="10dp"
+    tools:context=".cart">
+
+
+    <TextView
+        android:id="@+id/cart"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="Cart"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="3dp"
+        android:background="#F80C0C"
+        android:drawableLeft="@drawable/ic_action_logout"
+        android:onClick="logout"
+        android:text="Log Out"
+        app:layout_constraintBottom_toTopOf="@+id/cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    z<EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cart"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logout" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart">
+
+        <TextView
+            android:id="@+id/product"
+            android:layout_width="212dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Qty."
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Cost"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="-48dp"
+            tools:layout_editor_absoluteY="567dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="392dp"
+        android:layout_height="433dp"
+        android:layout_below="@id/menu"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableLayout
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp">
+
+            <TableRow
+                android:id="@+id/m1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M1"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M2"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M3"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/m4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nm4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="M4"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removem4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_m4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qm4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addm4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_m4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cm4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L1"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L2"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L3"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/l4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nl4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="L4"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removel4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_l4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/ql4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addl4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_l4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cl4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mobile Charger"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Head Phones"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mobile Cover"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ma4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nma4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Camera Lens"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removema4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_ma4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qma4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addma4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_ma4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cma4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/la1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla1"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Laptop Charger"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la1"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la1"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla1"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla2"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Laptop Cover"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la2"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la2"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla2"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla3"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Mouse"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la3"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la3"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla3"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/la4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nla4"
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="Keyboard"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/removela4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:onClick="rem_la4"
+                        android:src="@drawable/ic_action_remove" />
+
+                    <TextView
+                        android:id="@+id/qla4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/addla4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:onClick="add_la4"
+                        android:src="@drawable/ic_action_add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cla4"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:paddingLeft="10dp"
+                    android:text="TOTAL"
+                    android:textColor="#D60909"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tqty"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tcost"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/orderb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="16dp"
+        android:background="#101010"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="order"
+        android:text="Place\nOrder"
+        android:textColor="#FAF8F8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->
